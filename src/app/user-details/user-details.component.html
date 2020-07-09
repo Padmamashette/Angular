@@ -1,0 +1,46 @@
+<h2 style="text-align: center;">User-details!</h2>
+<button (click)= 'usertable()'>Go to User data</button>
+
+<div style="padding : 100px">
+    <div style="border:1px solid; height: 800px; overflow:scroll">    
+        <table class="table">
+              
+                     
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Change</th>      
+                    <th>Delete</th>                        
+                </tr>
+                       
+                             
+                <tr *ngFor="let todo of userToDos" >
+                         <td>{{todo.id}}</td>                                  
+                    <td>
+                        <div *ngIf="todo.completed"><s>{{todo.title}}</s></div>
+                        <div *ngIf="!todo.completed">{{todo.title}}</div>                                      
+                    </td>
+                        <td>{{todo.completed}}</td>                                   
+                    <td>
+                        <input type="checkbox" id="checkStatus" (change)="changeStatus($event, todo)">
+                    </td>                        
+                    <td>
+                        <button type="button" id="delButton" (click)="deleteUserToDos(todo)">Delete User</button>
+                    </td>               
+                </tr>                                  
+                       
+        </table>    
+    </div>
+
+    <div >            
+        <table >                 
+            <td>
+                <textarea id="InputTodo" style="width: 750px " ></textarea>                             
+            </td>                 
+            <td>
+                <button class="btn btn-primary" (click)="addnewTodos()">Add New Todos</button>  
+            </td>                
+        </table>          
+    </div> 
+</div>    
