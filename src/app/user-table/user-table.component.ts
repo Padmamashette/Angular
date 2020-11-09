@@ -1,3 +1,5 @@
+//ToDo 1 to display all users details in table format
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
