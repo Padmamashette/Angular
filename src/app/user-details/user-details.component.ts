@@ -1,3 +1,5 @@
+//ToDo 2 to get users details on selecting user id.
+
 import { Component, OnInit } from '@angular/core';
 import { Router , ActivatedRoute } from '@angular/router';
 import { UserdetailsService } from './userdetails.service';
